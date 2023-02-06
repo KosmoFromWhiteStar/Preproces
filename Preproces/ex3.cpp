@@ -1,24 +1,34 @@
 #include <iostream>
+
 #define INPUT std::cin >> 
 #define OUT std::cout <<
-
-#define CHEK_PERSONS(a) ((a) > (20))
-#define CIRCLE_WRITE( a ) for (int i = 0; i < 10; i++) { INPUT a[i]; if(CHEK_PERSONS(a[i])) {OUT "Too much. try again"; i--;} }
-
 #define ENDL << std::endl;
-#define EMPTY_SIT(a) if(a =< 0) OUT "EPMTY"
 
-#define CIRCLE_OUT(a) for (int i = 0; i < 10; i++) { OUT "Vagon: " << a[i] ENDL EMPTY_SIT(a[i]); }
+#define TEMP(i, a) INPUT a; counter_Peop(i, a); count += a;
+#define CIRCLE_WRITE(a) for(int i = 0; i < 10; ++i) {TEMP(i, a[i])}
+#define CIRCLE_OUT()
 
 
+void counter_Peop(int i, int a)
+{
+	if (a > 20) {
+		OUT "Car: " << i ENDL
+		OUT "Count people too mach: " << a ENDL
+	}
+	if (a <= 0) {
+		OUT "Car: " << i ENDL
+			OUT "Count people, very malo: " << a ENDL
+	}
+}
 //10 вагонов
 //20 пассажиров в каждом
 
 int main()
 {
+	int count = 0;
 	int count_persons[10] = {};
 	OUT "Input count persons\n";
 	CIRCLE_WRITE(count_persons);
 	CIRCLE_OUT(count_persons)
-
+	OUT "Count people " << count ENDL
 }
