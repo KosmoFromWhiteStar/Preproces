@@ -29,6 +29,5 @@ int main()
 	int count_persons[10] = {};
 	OUT "Input count persons\n";
 	CIRCLE_WRITE(count_persons);
-	CIRCLE_OUT(count_persons)
 	OUT "Count people " << count ENDL
 }
