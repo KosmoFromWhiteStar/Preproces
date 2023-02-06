@@ -6,7 +6,6 @@
 
 #define TEMP(i, a) INPUT a; counter_Peop(i, a); count += a;
 #define CIRCLE_WRITE(a) for(int i = 0; i < 10; ++i) {TEMP(i, a[i])}
-#define CIRCLE_OUT()
 
 
 void counter_Peop(int i, int a)
@@ -20,8 +19,8 @@ void counter_Peop(int i, int a)
 			OUT "Count people, very malo: " << a ENDL
 	}
 }
-//10 âàãîíîâ
-//20 ïàññàæèðîâ â êàæäîì
+//10 Ã¢Å•ÄƒÃ®Ã­Ã®Ã¢
+//20 ÄÅ•Å„Å„Å•Ä‡ÄÄ‘Ã®Ã¢ Ã¢ Ä™Å•Ä‡Ã¤Ã®Ä›
 
 int main()
 {
